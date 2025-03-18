@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churn Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Customer Churn Prediction</h2>
+        <form action="/predict" method="POST">
+            <div class="form-group">
+                <label for="age">Customer Age:</label>
+                <input type="number" class="form-control" id="age" name="Customer_Age" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select class="form-control" id="gender" name="Gender">
+                    <option value="0">Male</option>
+                    <option value="1">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dependents">Dependent Count:</label>
+                <input type="number" class="form-control" id="dependents" name="Dependent_count" required>
+            </div>
+            <div class="form-group">
+                <label for="education">Education Level:</label>
+                <select class="form-control" id="education" name="Education_Level">
+                    <option value="0">Uneducated</option>
+                    <option value="1">High School</option>
+                    <option value="2">Graduate</option>
+                    <option value="3">Post-Graduate</option>
+                    <option value="4">Doctorate</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="marital">Marital Status:</label>
+                <select class="form-control" id="marital" name="Marital_Status">
+                    <option value="0">Single</option>
+                    <option value="1">Married</option>
+                    <option value="2">Divorced</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="income">Income Category:</label>
+                <select class="form-control" id="income" name="Income_Category">
+                    <option value="0">Less than $40K</option>
+                    <option value="1">$40K - $60K</option>
+                    <option value="2">$60K - $80K</option>
+                    <option value="3">$80K - $120K</option>
+                    <option value="4">$120K +</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="card">Card Category:</label>
+                <select class="form-control" id="card" name="Card_Category">
+                    <option value="0">Blue</option>
+                    <option value="1">Silver</option>
+                    <option value="2">Gold</option>
+                    <option value="3">Platinum</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="months">Months on Book:</label>
+                <input type="number" class="form-control" id="months" name="Months_on_book" required>
+            </div>
+            <div class="form-group">
+                <label for="relationship">Total Relationship Count:</label>
+                <input type="number" class="form-control" id="relationship" name="Total_Relationship_Count" required>
+            </div>
+            <div class="form-group">
+                <label for="inactive">Months Inactive in Last 12 Months:</label>
+                <input type="number" class="form-control" id="inactive" name="Months_Inactive_12_mon" required>
+            </div>
+            <div class="form-group">
+                <label for="contacts">Contacts in Last 12 Months:</label>
+                <input type="number" class="form-control" id="contacts" name="Contacts_Count_12_mon" required>
+            </div>
+            <div class="form-group">
+                <label for="credit">Credit Limit:</label>
+                <input type="number" step="0.01" class="form-control" id="credit" name="Credit_Limit" required>
+            </div>
+            <div class="form-group">
+                <label for="revolving">Total Revolving Balance:</label>
+                <input type="number" class="form-control" id="revolving" name="Total_Revolving_Bal" required>
+            </div>
+            <div class="form-group">
+                <label for="open_buy">Average Open to Buy:</label>
+                <input type="number" step="0.01" class="form-control" id="open_buy" name="Avg_Open_To_Buy" required>
+            </div>
+            <div class="form-group">
+                <label for="amt_change">Total Amount Change Q4 to Q1:</label>
+                <input type="number" step="0.01" class="form-control" id="amt_change" name="Total_Amt_Chng_Q4_Q1" required>
+            </div>
+            <div class="form-group">
+                <label for="trans_amt">Total Transaction Amount:</label>
+                <input type="number" class="form-control" id="trans_amt" name="Total_Trans_Amt" required>
+            </div>
+            <div class="form-group">
+                <label for="trans_ct">Total Transaction Count:</label>
+                <input type="number" class="form-control" id="trans_ct" name="Total_Trans_Ct" required>
+            </div>
+            <div class="form-group">
+                <label for="ct_change">Total Transaction Count Change Q4 to Q1:</label>
+                <input type="number" step="0.01" class="form-control" id="ct_change" name="Total_Ct_Chng_Q4_Q1" required>
+            </div>
+            <div class="form-group">
+                <label for="utilization">Average Utilization Ratio:</label>
+                <input type="number" step="0.01" class="form-control" id="utilization" name="Avg_Utilization_Ratio" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
